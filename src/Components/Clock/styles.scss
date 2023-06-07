@@ -1,0 +1,62 @@
+.Clock {
+    border-radius: 100%;
+    width: 13rem;
+    aspect-ratio: 1/1;
+    background:var(--color--off-shore);
+    position: relative;
+    gap: 1rem;
+
+    --hora: 1; //0 --24
+    --minutes: 1; //0 --60
+    --seconds: 1; //0 --60
+    padding-bottom: 2rem;
+
+    //x-360
+    //0-24
+
+    .hour {
+        width: 6rem;
+        height: 3.1px;
+        background: var(--color-assassins-red);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotateZ(calc(calc(calc(var(--hora) * 360deg) / 12) - 90deg));
+        transform-origin: left center;
+
+    }
+
+    .minutes {
+        width: 6rem;
+        height: 2px;
+        background:var(--color-hollow-knight);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotateZ(calc(calc(calc(var(--minutes) * 360deg) / 60) - 90deg));
+        transform-origin: left center;
+    }
+
+    .seconds {
+        width: 4rem;
+        height: 1px;
+        background:var(--color-hollow-knight);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotateZ(calc(calc(calc(var(--seconds) * 360deg) / 60) - 90deg));
+        transform-origin: left center;
+        
+    }
+    .circle{
+        border-radius: 50%;
+        width: 10px;
+        aspect-ratio: 1/1;
+        background:var(--color-black);
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        border: 2px solid var(--color-assassins-red);
+
+    }
+}

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-quiet-abyss);
+}
+
+:root {
+  --color-assassins-red: #fa0606;
+  --color-black: #000000;
+  --color-quiet-abyss: #1b0130;
+  --color-hollow-knight: #2e0153;
+  --color--off-shore: #d1cdcd;
+  --color-reversed-grey: #080808;
+}
+
+body.dark {
+  --color-assassins-red: #fa0606;
+  --color-black: #fffcfc;
+  --color-quiet-abyss: #bed0ff;
+  --color-hollow-knight: #d7baf8;
+  --color--off-shore: #520480;
+  --color-reversed-grey: #c16bf3;
+}
+
+.Number {
+  font-family: "Heebo", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color--off-shore);
+}
+.Number .hourtype {
+  margin-left: 1rem;
+}
+
+.Date {
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.15rem;
+}
+.Date .text {
+  color: var(--color--off-shore);
+}
+.Date .number {
+  border-radius: 100%;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  background: var(--color--off-shore);
+  color: var(--color-reversed-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Clock {
+  border-radius: 100%;
+  width: 13rem;
+  aspect-ratio: 1/1;
+  background: var(--color--off-shore);
+  position: relative;
+  gap: 1rem;
+  --hora: 1;
+  --minutes: 1;
+  --seconds: 1;
+  padding-bottom: 2rem;
+}
+.Clock .hour {
+  width: 6rem;
+  height: 3.1px;
+  background: var(--color-assassins-red);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateZ(calc(var(--hora) * 360deg / 12 - 90deg));
+  transform-origin: left center;
+}
+.Clock .minutes {
+  width: 6rem;
+  height: 2px;
+  background: var(--color-hollow-knight);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateZ(calc(var(--minutes) * 360deg / 60 - 90deg));
+  transform-origin: left center;
+}
+.Clock .seconds {
+  width: 4rem;
+  height: 1px;
+  background: var(--color-hollow-knight);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotateZ(calc(var(--seconds) * 360deg / 60 - 90deg));
+  transform-origin: left center;
+}
+.Clock .circle {
+  border-radius: 50%;
+  width: 10px;
+  aspect-ratio: 1/1;
+  background: var(--color-black);
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 2px solid var(--color-assassins-red);
+}
+
+.ContentClock {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.Button {
+  border: 0.5rem solid var(--color--off-shore);
+  border-radius: 4px;
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-quiet-abyss);
+  padding: 0.6rem;
+  cursor: pointer;
+  background: var(--color--off-shore);
+}
+
+/*# sourceMappingURL=index.css.map */

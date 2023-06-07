@@ -1,0 +1,26 @@
+.Date {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .15rem;
+
+    .text {
+
+        color:var(--color--off-shore);
+    }
+
+    .number {
+        border-radius: 100%;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        background: var(--color--off-shore);
+        color: var(--color-reversed-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
